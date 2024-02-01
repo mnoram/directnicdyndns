@@ -10,6 +10,12 @@ KEY=6f751f5d0b866de67c18ce310ecc2ef5d64b18152b797c392c2cf6c984f9c564
 
 Ensure that the file mode on .ddrc is correct (0400 or 0600); the script will complain if it is not. Once the above has been completed, run the script.
 
+You should probably add it to your crontab; e.g. the following will run the script and update your DNS record every 30 minutes:
+```
+$ crontab -l
+*/30 * * * * $HOME/bin/dyndns.sh
+```
+
 You can read more about Directnic's dynamic DNS service here: https://directnic.com/knowledge#/knowledge/article/3726.
 
 # dependencies
