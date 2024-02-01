@@ -40,7 +40,7 @@ URL="https://directnic.com/dns/gateway/$KEY/?data=$IP_ADDRESS"
 
 if [ $OS == "OpenBSD" ]
 then
-    RESULT=$(ftp -V-o - $URL 2>&1 /dev/null)
+    RESULT=$(ftp -V -o - $URL 2>&1 /dev/null)
 else
     RESULT=$(curl -s -o - $URL 2>&1 /dev/null)
 fi
