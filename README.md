@@ -39,7 +39,7 @@ chmod +x $HOME/bin/directnicddnsu.sh
 ```
 
 
-## Add it to crontab; e.g. the following will run the script and update your DNS record every 60 minutes:
+## Add it to crontab to update your DNS record every 60 minutes:
 ```
 $ crontab -e
 ```
@@ -48,13 +48,8 @@ Add line to file
 0 * * * * $HOME/bin/directnicddnsu.sh
 ```
 
+
 You can read more about Directnic's dynamic DNS service here: https://directnic.com/knowledge#/knowledge/article/3726.
---Ensure that the file mode on .ddrc is correct (0400 or 0600); the script will complain if it is not. Once the above has been completed, run the script.
-
-
-
-# dependencies
-On OpenBSD there are no dependencies (assuming a recent version of OpenBSD), while Linux needs _curl_ installed.
 
 # compatibility
 It has been tested on Raspbian GNU/Linux 12 (bookworm)
